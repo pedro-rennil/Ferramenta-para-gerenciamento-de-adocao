@@ -1,1 +1,0 @@
- animais = crud.carregar_dados()
