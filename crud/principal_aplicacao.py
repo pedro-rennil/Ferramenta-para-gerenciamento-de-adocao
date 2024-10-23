@@ -1,4 +1,4 @@
-import crud.crud as crud
+import operacoes
 
 def menu():
     print("==== Gerenciamento de Adoção de Animais ====")
