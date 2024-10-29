@@ -11,7 +11,7 @@ def main():
         op = input("Escolha a opção desejada: ")
 
         if op == '1':
-            import adoção.init as adocao
+            import adocao.init as adocao
             adocao.main()
         elif op == '2':
             import cliente.init as cliente
