@@ -7,5 +7,14 @@
         "idade": "8",
         "personalidade": "Amig\u00e1vel",
         "situacao_saude": "Epilepsia controlada por medicamento"
+    },
+    {
+        "id": 4,
+        "nome": "Lua",
+        "especie": "Gato",
+        "raca": "Preto",
+        "idade": "2",
+        "personalidade": "Calma e amig\u00e1vel",
+        "situacao_saude": "Sa\u00fade \u00f3tima"
     }
 ]
