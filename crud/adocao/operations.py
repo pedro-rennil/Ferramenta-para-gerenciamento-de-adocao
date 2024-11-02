@@ -39,6 +39,16 @@ def adicionar_animal(nome, especie, raca, idade, personalidade, situacao_saude):
     salvar_dados(dados)
     print(f"Animal adicionado com sucesso! ID: {novo_id}")
 
+def buscar_animal(nome):
+    dados = carregar_dados()
+    resultados = [animal for animal in dados if animal["nome"].lower() == nome.lower()]
+    if resultados:
+        for animal in resultados:
+            print(f"ID: {animal['id']} - Nome: {animal['nome']}, Espécie: {animal['especie']}, Raça: {animal['raca']}, Idade: {animal['idade']}, Personalidade: {animal['personalidade']}, Saúde: {animal['situacao_saude']}")
+    else:
+        print(f"Animal com nome '{nome}' não encontrado.")
+
+
 def listar_animais():
     dados = carregar_dados()
     if not dados: 
@@ -50,7 +60,7 @@ def listar_animais():
 def atualizar_animal(id, novo_nome, nova_especie, nova_raca, nova_idade, nova_personalidade, nova_situacao_saude):
     dados = carregar_dados()
     for animal in dados:
-        if animal["id"] == id:
+        if  animal["id"] == id:
             animal["nome"] = novo_nome
             animal["especie"] = nova_especie
             animal["raca"] = nova_raca

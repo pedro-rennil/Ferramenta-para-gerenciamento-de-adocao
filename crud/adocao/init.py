@@ -1,11 +1,12 @@
-from adocao.operations import adicionar_animal, listar_animais, atualizar_animal, deletar_animal
+from adocao.operations import adicionar_animal, listar_animais, buscar_animal, atualizar_animal, deletar_animal
 def menu_adocao():
     print("===== Gerenciamento de Adoção de Animais =====")
     print("1. Adicionar Animal")
     print("2. Listar Animais")
     print("3. Atualizar Animal")
-    print("4. Remover Animal")
-    print("5. Voltar ao Menu Principal")
+    print("4. Buscar Animal")
+    print("5. Remover Animal")
+    print("6. Voltar ao Menu Principal")
 
 def main():
     while True:
@@ -35,10 +36,15 @@ def main():
             atualizar_animal(id, novo_nome, nova_especie, nova_raca, nova_idade, nova_personalidade, nova_situacao_saude)
 
         elif op == '4':
+            nome = input("Digite o nome do animal a ser buscado: ")
+            buscar_animal(nome=nome)
+
+
+        elif op == '5':
             id = int(input("Digite o ID do animal a ser deletado: "))
             deletar_animal(id)
 
-        elif op == '5':
+        elif op == '6':
             print("Voltando ao menu principal...")
             break
 
