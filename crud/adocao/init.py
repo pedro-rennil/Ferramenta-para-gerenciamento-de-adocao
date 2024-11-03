@@ -12,7 +12,7 @@ def invalido():
 
 def main():
     while True:
-        try:
+        #try:
             menu_adocao()
             op = input("Escolha a opção: ")
 
@@ -49,5 +49,5 @@ def main():
 
             else:
                 print("Opção inválida! Tente novamente.")
-        except:
-            invalido()
+        # except:
+        #     invalido()
